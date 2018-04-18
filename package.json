@@ -9,8 +9,13 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "lint": "eslint .",
-    "precommit": "pretty-quick --staged && yarn lint"
+    "pretty": "pretty-quick --staged",
+    "lint": "eslint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn pretty"
+    }
   },
   "dependencies": {
     "express": "^4.16.3"
@@ -23,7 +28,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
-    "husky": "^0.14.3",
+    "eslint-staged": "^1.0.1",
+    "husky": "^1.0.0-rc.1",
     "prettier": "1.12.1",
     "pretty-quick": "^1.4.1"
   }
