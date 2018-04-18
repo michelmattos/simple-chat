@@ -1,0 +1,13 @@
+<h1>Simple chat</h1>
+<p>A simple chat app made with Express and React.</p>
+<script>
+  fetch('/api/messages')
+    .then(res => res.json())
+    .then(messages => {
+      let items = ''
+      messages.map(m => {
+        items += `<li>${m.message}</li>`
+      })
+      document.body.innerHTML += `<ul>${items}</ul>`
+    })
+</script>
