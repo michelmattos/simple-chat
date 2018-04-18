@@ -1,0 +1,10 @@
+{
+  "name": "simple-chat",
+  "version": "0.0.0",
+  "description": "A simple chat app made with Express and React.",
+  "main": "index.js",
+  "repository": "https://github.com/michelmattos/simple-chat.git",
+  "author": "Michel Mattos <mattos.michel@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
