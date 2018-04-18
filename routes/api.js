@@ -6,6 +6,7 @@ api.get('/messages', (req, res) => {
   res.json([
     { message: 'Hello, world!' },
     { message: 'Hi, simple-chat!' },
+    { message: ':)' },
   ])
 })
 
