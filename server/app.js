@@ -1,3 +1,4 @@
+const console = require('console')
 const express = require('express')
 const routes = require('./routes')
 
