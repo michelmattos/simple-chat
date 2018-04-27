@@ -2,15 +2,13 @@
   "name": "simple-chat",
   "version": "0.0.0",
   "description": "A simple chat app made with Express and React.",
-  "main": "app.js",
+  "main": "server/app.js",
   "repository": "https://github.com/michelmattos/simple-chat.git",
   "author": "Michel Mattos <mattos.michel@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "pretty": "pretty-quick --staged",
-    "lint": "eslint-staged"
+    "start": "node server/app.js",
   },
   "husky": {
     "hooks": {
