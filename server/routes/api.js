@@ -1,13 +1,17 @@
-const express = require('express')
+// @flow
+import express from 'express'
+import type { $Request, $Response } from 'express'
 
 const api = express.Router()
 
-api.get('/messages', (req, res) => {
+const createMessage = (message: string) => ({ message })
+
+api.get('/messages', (req: $Request, res: $Response) => {
   res.json([
-    { message: 'Hello, world!' },
-    { message: 'Hi, simple-chat!' },
-    { message: ':)' },
+    createMessage('Hello, world!'),
+    createMessage('Hi, simple-chat!'),
+    createMessage(':)'),
   ])
 })
 
-module.exports = api
+export default api

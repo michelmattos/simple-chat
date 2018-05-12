@@ -1,6 +1,6 @@
-const console = require('console')
-const express = require('express')
-const routes = require('./routes')
+import console from 'console'
+import express from 'express'
+import routes from './routes'
 
 const app = express()
 

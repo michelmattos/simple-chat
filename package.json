@@ -2,20 +2,20 @@
   "name": "simple-chat",
   "version": "0.0.0",
   "description": "A simple chat app made with Express and React.",
-  "main": "server/app.js",
+  "main": "dist/app.js",
   "repository": "https://github.com/michelmattos/simple-chat.git",
   "author": "Michel Mattos <mattos.michel@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node server/app.js",
+    "start": "node dist/app.js",
     "lint": "eslint 'server/**/*.js'",
-    "test": "ava --color"
+    "flow": "flow",
+    "test": "ava --color",
+    "build": "babel server/ -d dist/"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint"
-    ]
+    "*.js": ["eslint"]
   },
   "husky": {
     "hooks": {
@@ -28,14 +28,17 @@
   "devDependencies": {
     "ava": "1.0.0-beta.4",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.46.3",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.8.1",
+    "flow-bin": "^0.72.0",
     "husky": "^1.0.0-rc.4",
     "lint-staged": "^7.1.0",
     "prettier": "1.12.1",
