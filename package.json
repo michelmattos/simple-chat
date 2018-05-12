@@ -13,7 +13,9 @@
     "test": "ava --color"
   },
   "lint-staged": {
-    "*.js": ["eslint"]
+    "*.js": [
+      "eslint"
+    ]
   },
   "husky": {
     "hooks": {
@@ -25,6 +27,8 @@
   },
   "devDependencies": {
     "ava": "1.0.0-beta.4",
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
