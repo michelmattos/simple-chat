@@ -11,8 +11,7 @@
     "start": "babel-node server/app.js",
     "lint": "eslint 'server/**/*.js'",
     "flow": "flow",
-    "test": "ava --color",
-    "build": "babel server/ -d dist/"
+    "test": "ava --color"
   },
   "lint-staged": {
     "*.js": ["eslint"]
